@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void PrintIntro();
+string GetGuessAndPrintBack();
+
+//Entry Point Of Our Application
+int main()
+{
+	PrintIntro();
+
+	GetGuessAndPrintBack();
+
+	cout << endl;
+	return 0;
+}
+    //introduce the game
+	PrintIntro(); {
+		constexpr int WORLD_LENGTH = 5;
+		cout << "Welcome to Bulls and Cows, A Fun Word Game." << endl;
+		cout << "Can you guess the " << WORLD_LENGTH;
+		cout << " letter isogram I'm Thinking of?\n";
+		cout << endl;
+		return;
+	}
+	// get a guess from the player
+	string GetGuessAndPrintBack() {
+		cout << "Enter Your Guess: ";
+		string Guess = "";
+		getline(cin, Guess);
+
+	// Print the guess back
+		cout << "I Think Your Guess Was: " << Guess << endl;
+		return Guess;
+	}
